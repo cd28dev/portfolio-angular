@@ -1,0 +1,14 @@
+<section class="education">
+  <div *ngFor="let group of groups">
+    <h3 class="group-title">{{ group }}</h3>
+    <div class="card-group">
+      <div *ngFor="let card of getCardsByGroup(group)" class="card">
+        <h3>{{ card.title }}</h3>
+        <p>{{ card.description }}</p>
+        <a *ngIf="card.link" [href]="card.link.url" target="_blank" class="link">
+          {{ card.link.label }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

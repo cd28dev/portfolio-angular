@@ -1,0 +1,95 @@
+.education {
+  padding: 2rem 0 4rem 0;     /* menos padding arriba para alinearlo con .home */
+  text-align: center;
+}
+
+.education .section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;        /* igual que .home */
+  color: var(--accent);
+}
+
+.education .container {
+  padding-top: 0;             /* elimina margen extra del container */
+  margin: 0 auto;             /* centra el contenido */
+}
+
+.education .group-title {
+  text-align: center;         /* centrado */
+  margin: 2rem 0 1rem;        /* espacio superior e inferior */
+  font-size: 1.4rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;    /* cards centradas horizontalmente */
+  margin-bottom: 2rem;        /* similar al margen de .home .skills */
+}
+
+.education .card {
+  background: var(--card);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  padding: 1rem;
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;         /* centra el contenido */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.education .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.education .card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.education .card p {
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.education .card .link {
+  display: inline-block;
+  margin-top: 0.3rem;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.education .card .link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .card-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .education .section-title {
+    font-size: 1.6rem;
+  }
+
+  .education .group-title {
+    font-size: 1.2rem;
+  }
+
+  .education .card {
+    text-align: center;
+    max-width: 100%;
+  }
+}

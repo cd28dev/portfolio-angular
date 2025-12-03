@@ -1,0 +1,35 @@
+<section class="projects">
+  <div class="container">
+    <ul class="cards">
+      <li *ngFor="let project of projects" class="card">
+        <div class="card-body">
+          <!-- Título del proyecto -->
+          <h3>{{ project.title }}</h3>
+
+          <!-- Contexto / motivo -->
+          <p *ngIf="project.context" class="context">{{ project.context }}</p>
+
+          <!-- Descripción -->
+          <p class="desc">{{ project.description }}</p>
+
+          <!-- Rol -->
+          <p *ngIf="project.role" class="role"><strong>Rol:</strong> {{ project.role }}</p>
+
+          <!-- Tecnologías en lista -->
+          <div *ngIf="project.techStack?.length" class="tech-stack">
+            <strong>Tecnologías:</strong>
+            <ul>
+              <li *ngFor="let tech of project.techStack">{{ tech }}</li>
+            </ul>
+          </div>
+
+          <!-- Video -->
+          <a *ngIf="project.video" [href]="project.video" target="_blank" rel="noopener" class="link">Ver video</a>
+
+          <!-- Repositorio -->
+          <a *ngIf="project.url" [href]="project.url" target="_blank" rel="noopener" class="link">Ver repositorio</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>

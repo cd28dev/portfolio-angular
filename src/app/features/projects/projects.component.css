@@ -1,0 +1,148 @@
+/* Contenedor principal de la sección */
+.projects .container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Título principal */
+.projects .section-title {
+  text-align: left;
+  margin-bottom: 2rem;
+  color: var(--accent);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Lista de cards */
+.projects .cards {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+/* Cada card */
+.projects .card {
+  background: var(--card);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.projects .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Contenido interno de la card */
+.projects .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* espacio vertical uniforme entre elementos */
+}
+
+/* Título del proyecto */
+.projects .card-body h3 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Contexto / motivo */
+.projects .context {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+/* Descripción */
+.projects .desc {
+  margin: 0;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: justify
+}
+
+/* Subtítulos de rol y tecnologías */
+.projects .role,
+.projects .tech-stack {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+/* Viñetas para rol y tech-stack */
+
+.projects .tech-stack ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0.25rem 0 0 0;
+}
+
+.projects .tech-stack li {
+  font-size: 0.95rem;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+/* Links */
+.projects .link {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  margin-top: 0.5rem;
+  transition: color 0.2s;
+}
+
+.projects .link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Diagramas o capturas */
+.projects .card-body .diagram {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin: 0.5rem 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .projects .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .projects .section-title {
+    font-size: 1.6rem;
+  }
+
+  .projects .card-body h3 {
+    font-size: 1.1rem;
+  }
+
+  .projects .desc,
+  .projects .context,
+  .projects .role,
+  .projects .tech-stack {
+    font-size: 0.9rem;
+  }
+
+  .projects .card-body .diagram {
+    max-height: 150px;
+  }
+}

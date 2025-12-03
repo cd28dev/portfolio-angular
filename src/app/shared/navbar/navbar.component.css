@@ -1,0 +1,21 @@
+/* Solo estilos propios del navbar, sin media queries */
+.nav .brand a { 
+  font-weight: 700; 
+}
+
+.nav .links a { 
+  font-weight: 600; 
+}
+
+.nav .brand a {
+  font-weight: 600;           /* menos pesado que 700 */
+  font-size: 1.3rem;          /* un poco más pequeño y discreto */
+  color: var(--accent);       /* mantiene tu color principal */
+  text-decoration: none;      /* sin subrayado */
+  letter-spacing: 0.5px;      /* sutil, minimalista */
+  transition: color 0.2s;
+}
+
+.nav .brand a:hover {
+  color: #0056b3;             /* cambio sutil al pasar el mouse */
+}

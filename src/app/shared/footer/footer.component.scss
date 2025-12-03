@@ -1,0 +1,33 @@
+/* Footer general */
+.site-footer {
+  background-color: var(--card); /* mismo color de las cards o un gris suave */
+  padding: 0.1rem 0;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Contenedor interno */
+.site-footer .container {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+/* Links */
+.site-footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.site-footer a:hover {
+  color: #0056b3; /* sutil cambio de color */
+  text-decoration: underline;
+}
