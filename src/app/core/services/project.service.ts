@@ -14,7 +14,28 @@ export class DataService {
       techStack: ['Java 17', 'Spring Boot 3', 'Kafka', 'PostgreSQL', 'Docker', 'JWT', 'Spring Cloud'],
       role: 'Parte de equipo de desarrolladores (3)',
       video: 'video',
-      url: 'https://github.com/joalf1994/ecommerce'
+      url: 'https://github.com/joalf1994/ecommerce',
+      inProgress: false
+    },
+    {
+      title: 'Sistema de [Tu Otro Proyecto Java]',
+      description: 'API RESTful avanzada implementando seguridad con OAuth2 y buenas prácticas de Clean Architecture. (Actualmente trabajando en la integración de pasarela de pagos).',
+      context: 'Proyecto Personal (En Desarrollo)', // <--- Etiqueta clave
+      techStack: ['Java 17', 'Spring Boot 3', 'Spring Security', 'JWT', 'MySQL'],
+      role: 'Backend Developer',
+      url: 'https://github.com/carlosadrianzen/tu-repo-nuevo',
+      inProgress: true
+    },
+    {
+      title: 'Aplicación de Gestión [Nombre App]',
+      description: 'Desarrollo Fullstack de una solución a medida para un cliente real. Gestión de usuarios, reportes y panel administrativo reactivo.',
+      context: 'Experiencia Freelance / Profesional', // <--- Esto vende mucho
+      techStack: ['Laravel', 'Vue.js', 'MySQL', 'PHP', 'Tailwind CSS'],
+      role: 'Fullstack Developer',
+      // Si el cliente no te deja poner el código, pon el link a la web desplegada
+      // O déjalo vacío si es confidencial.
+      url: '#',
+      inProgress: true
     }
   ];
 
