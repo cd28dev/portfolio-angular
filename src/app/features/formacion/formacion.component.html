@@ -1,14 +1,19 @@
 <section class="education">
-  <div *ngFor="let group of groups">
-    <h3 class="group-title">{{ group }}</h3>
+  <div class="container"> <div *ngFor="let item of groupedFormacion">
+
+    <h3 class="group-title">{{ item.group }}</h3>
+
     <div class="card-group">
-      <div *ngFor="let card of getCardsByGroup(group)" class="card">
+      <div *ngFor="let card of item.cards" class="card">
         <h3>{{ card.title }}</h3>
         <p>{{ card.description }}</p>
-        <a *ngIf="card.link" [href]="card.link.url" target="_blank" class="link">
+        <a *ngIf="card.link" [href]="card.link.url" target="_blank" rel="noopener" class="link">
           {{ card.link.label }}
         </a>
       </div>
     </div>
+
+  </div>
+
   </div>
 </section>

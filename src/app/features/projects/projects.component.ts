@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Project } from '../../core/models/project.model';
 import { DataService } from '../../core/services/project.service';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-projects',
@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css']
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit {
   projects: Project[] = [];
 
   constructor(private dataService: DataService) {}

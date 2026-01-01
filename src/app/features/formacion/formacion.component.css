@@ -1,95 +1,82 @@
 .education {
-  padding: 2rem 0 4rem 0;     /* menos padding arriba para alinearlo con .home */
-  text-align: center;
-}
-
-.education .section-title {
-  font-size: 2rem;
-  margin-bottom: 2rem;        /* igual que .home */
-  color: var(--accent);
+  padding: 2rem 0 4rem;
+  animation: fadeIn 0.5s ease-out;
 }
 
 .education .container {
-  padding-top: 0;             /* elimina margen extra del container */
-  margin: 0 auto;             /* centra el contenido */
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-.education .group-title {
-  text-align: center;         /* centrado */
-  margin: 2rem 0 1rem;        /* espacio superior e inferior */
-  font-size: 1.4rem;
-  color: var(--text);
-  font-weight: 600;
+.group-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin: 2.5rem 0 1.5rem;
+  font-family: var(--font-code);
+}
+
+.group-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+  opacity: 0.5;
 }
 
 .card-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;    /* cards centradas horizontalmente */
-  margin-bottom: 2rem;        /* similar al margen de .home .skills */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Grid automático */
+  gap: 1.5rem;
 }
 
-.education .card {
+.card {
   background: var(--card);
-  border: 1px solid var(--accent);
-  border-radius: 4px;
-  padding: 1rem;
-  flex: 1 1 250px;
-  max-width: 300px;
-  text-align: center;         /* centra el contenido */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.2s, border-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.education .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
 }
 
-.education .card h3 {
-  margin-bottom: 0.5rem;
-  color: var(--accent);
-  font-size: 1rem;
-  font-weight: 600;
+.card h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text);
+  font-size: 1.1rem;
 }
 
-.education .card p {
-  margin-bottom: 0.5rem;
+.card p {
+  margin: 0 0 1rem 0;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.5;
 }
 
-.education .card .link {
-  display: inline-block;
-  margin-top: 0.3rem;
+.card .link {
+  font-size: 0.85rem;
   color: var(--accent);
-  font-weight: 600;
   text-decoration: none;
+  font-weight: 600;
+  align-self: flex-start;
+  font-family: var(--font-code);
 }
 
-.education .card .link:hover {
+.card .link:hover {
   text-decoration: underline;
+  filter: brightness(1.2);
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .card-group {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .education .section-title {
-    font-size: 1.6rem;
-  }
-
-  .education .group-title {
-    font-size: 1.2rem;
-  }
-
-  .education .card {
-    text-align: center;
-    max-width: 100%;
-  }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }

@@ -1,9 +1,34 @@
 <section class="contact">
   <div class="container">
-    <h2>Contacto</h2>
 
-    <p>Email: <a class="link" href="mailto:carlos@example.com">carlos@example.com</a></p>
-    <p>LinkedIn: <a class="link" href="#" target="_blank" rel="noopener">Perfil</a></p>
-    <p>GitHub: <a class="link" href="#" target="_blank" rel="noopener">Repos</a></p>
+    <div class="contact-card">
+      <h2>&lt;Contacto /&gt;</h2>
+
+      <p class="intro">
+        Actualmente estoy buscando nuevas oportunidades como
+        <span class="highlight">Backend Developer</span>.
+        ¿Tienes un proyecto en mente o quieres charlar sobre tecnología?
+      </p>
+
+      <a [href]="'mailto:' + contactInfo.email" class="email-btn">
+        Enviar Correo
+      </a>
+
+      <p class="email-text">
+        o escríbeme a: <br>
+        <strong>{{ contactInfo.email }}</strong>
+      </p>
+
+      <div class="social-links">
+        <a [href]="contactInfo.linkedin" target="_blank" rel="noopener" class="link">
+          LinkedIn
+        </a>
+        <span class="separator">|</span>
+        <a [href]="contactInfo.github" target="_blank" rel="noopener" class="link">
+          GitHub
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>

@@ -3,6 +3,11 @@ import { CommonModule } from '@angular/common';
 import { FormacionService } from '../../core/services/formacion.service';
 import { Card } from '../../core/models/formacion.model';
 
+interface GroupedCards {
+  group: string;
+  cards: Card[];
+}
+
 @Component({
   selector: 'app-formacion',
   standalone: true,
@@ -11,17 +16,16 @@ import { Card } from '../../core/models/formacion.model';
   styleUrls: ['./formacion.component.css']
 })
 export class FormacionComponent {
-  cards: Card[] = [];
-  groups: string[] = [];
+  groupedFormacion: GroupedCards[] = [];
 
   constructor(private formacionService: FormacionService) {
-    this.cards = this.formacionService.getAll();
+    const allCards = this.formacionService.getAll();
+    const groups = Array.from(new Set(allCards.map(c => c.group)));
 
-    // Genera los grupos únicos automáticamente
-    this.groups = Array.from(new Set(this.cards.map(card => card.group)));
-  }
-
-  getCardsByGroup(group: string): Card[] {
-    return this.cards.filter(card => card.group === group);
+    // Pre-calculamos la estructura final
+    this.groupedFormacion = groups.map(group => ({
+      group,
+      cards: allCards.filter(c => c.group === group)
+    }));
   }
 }

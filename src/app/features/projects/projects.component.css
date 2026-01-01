@@ -1,148 +1,158 @@
-/* Contenedor principal de la sección */
-.projects .container {
-  max-width: 900px;
-  margin: 3rem auto;
+.projects {
+  padding: 2rem 0 4rem;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 0 1rem;
-  font-family: 'Inter', sans-serif;
 }
 
-/* Título principal */
-.projects .section-title {
-  text-align: left;
-  margin-bottom: 2rem;
-  color: var(--accent);
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-/* Lista de cards */
-.projects .cards {
-  list-style: none;
-  padding: 0;
+/* Grid layout */
+.cards {
   display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
 }
 
-/* Cada card */
-.projects .card {
+.badge-wip {
+  display: inline-block;
+  font-size: 0.75rem;
+  background: rgba(255, 193, 7, 0.15);
+  color: #ffc107; /* Amarillo brillante */
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-left: 10px;
+  vertical-align: middle;
+  font-family: var(--font-code);
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+
+/* --- TARJETA --- */
+.card {
   background: var(--card);
+  border: 1px solid var(--border);
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, border-color 0.2s;
+  height: 100%; /* Para que todas midan lo mismo */
 }
 
-.projects .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent); /* Glow sutil al hover */
 }
 
-/* Contenido interno de la card */
-.projects .card-body {
+/* Header */
+.card-header {
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text);
+  font-size: 1.3rem;
+  font-family: var(--font-code);
+}
+
+.context {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* Body */
+.card-body {
+  flex: 1; /* Empuja el footer hacia abajo */
   display: flex;
   flex-direction: column;
-  gap: 0.75rem; /* espacio vertical uniforme entre elementos */
+  gap: 1rem;
 }
 
-/* Título del proyecto */
-.projects .card-body h3 {
-  margin: 0;
-  color: var(--accent);
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-/* Contexto / motivo */
-.projects .context {
+.desc {
   margin: 0;
   color: var(--muted);
   font-size: 0.95rem;
-  font-style: italic;
+  line-height: 1.6;
 }
 
-/* Descripción */
-.projects .desc {
-  margin: 0;
+.role {
+  font-size: 0.9rem;
   color: var(--text);
-  font-size: 1rem;
-  line-height: 1.4;
-  text-align: justify
 }
 
-/* Subtítulos de rol y tecnologías */
-.projects .role,
-.projects .tech-stack {
-  margin: 0;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--muted);
-}
-
-/* Viñetas para rol y tech-stack */
-
-.projects .tech-stack ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-  margin: 0.25rem 0 0 0;
-}
-
-.projects .tech-stack li {
-  font-size: 0.95rem;
-  color: var(--text);
-  margin-bottom: 0.25rem;
-}
-
-/* Links */
-.projects .link {
-  text-decoration: none;
+.role .label {
   color: var(--accent);
   font-weight: 600;
+  font-family: var(--font-code);
+}
+
+/* --- TECH STACK (BADGES) --- */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   margin-top: 0.5rem;
+}
+
+.tech-badge {
+  background: rgba(137, 180, 250, 0.1); /* Accent transparente */
+  color: var(--accent);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-family: var(--font-code);
+  font-weight: 500;
+  border: 1px solid rgba(137, 180, 250, 0.2);
+}
+
+/* Footer de Botones */
+.card-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-link {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   transition: color 0.2s;
 }
 
-.projects .link:hover {
-  color: #0056b3;
-  text-decoration: underline;
+.btn-link .icon {
+  font-family: 'Material Icons', sans-serif; /* Opcional si usas iconos, sino texto */
+  font-size: 1rem;
 }
 
-/* Diagramas o capturas */
-.projects .card-body .diagram {
-  width: 100%;
-  max-height: 200px;
-  object-fit: contain;
-  border-radius: 4px;
-  border: 1px solid rgba(0,0,0,0.1);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  margin: 0.5rem 0;
+.btn-link:hover {
+  color: var(--accent);
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive */
 @media (max-width: 600px) {
-  .projects .cards {
+  .cards {
     grid-template-columns: 1fr;
-  }
-
-  .projects .section-title {
-    font-size: 1.6rem;
-  }
-
-  .projects .card-body h3 {
-    font-size: 1.1rem;
-  }
-
-  .projects .desc,
-  .projects .context,
-  .projects .role,
-  .projects .tech-stack {
-    font-size: 0.9rem;
-  }
-
-  .projects .card-body .diagram {
-    max-height: 150px;
   }
 }

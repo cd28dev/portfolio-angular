@@ -1,33 +1,24 @@
-/* Footer general */
 .site-footer {
-  background-color: var(--card); /* mismo color de las cards o un gris suave */
-  padding: 0.1rem 0;
+  background-color: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
   text-align: center;
-  border-top: 1px solid rgba(0,0,0,0.05);
-  font-family: 'Inter', sans-serif;
+  margin-top: auto;
 }
 
-/* Contenedor interno */
-.site-footer .container {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 0.95rem;
+.container {
   color: var(--muted);
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  align-items: center;
+  font-size: 0.9rem;
 }
 
-/* Links */
 .site-footer a {
   color: var(--accent);
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
+  font-weight: 600;
+  margin-left: 5px;
+  transition: text-shadow 0.2s;
 }
 
 .site-footer a:hover {
-  color: #0056b3; /* sutil cambio de color */
-  text-decoration: underline;
+  text-shadow: 0 0 10px rgba(137, 180, 250, 0.4);
 }

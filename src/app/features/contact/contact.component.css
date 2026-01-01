@@ -1,12 +1,112 @@
+/* Contenedor principal */
 .contact {
-  .container {
-    max-width: 720px;
-    margin: 3rem auto;
-    padding: 0 1rem;
-    text-align: center;
+  padding: 4rem 1rem;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.contact .container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Tarjeta de Contacto */
+.contact-card {
+  background: var(--card); /* Fondo gris oscuro */
+  border: 1px solid var(--border);
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+}
+
+.contact-card h2 {
+  color: var(--accent);
+  font-family: var(--font-code);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-card .intro {
+  color: var(--text);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.contact-card .intro .highlight {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Botón principal grande */
+.email-btn {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: var(--font-code);
+  margin-bottom: 2rem;
+}
+
+.email-btn:hover {
+  background-color: rgba(137, 180, 250, 0.1); /* Fondo sutil al hover */
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(137, 180, 250, 0.2);
+}
+
+.email-text {
+  margin-top: -1.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Enlaces secundarios */
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+
+}
+
+.social-links .link {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.social-links .link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.social-links .separator {
+  opacity: 0.3;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .contact-card {
+    padding: 1.5rem;
   }
 
-  h2 { margin-bottom: 1rem; }
-  p { margin: 6px 0; }
-  .link { color: #007bff; text-decoration: none; font-weight: 600; }
+  .contact-card h2 {
+    font-size: 1.5rem;
+  }
 }

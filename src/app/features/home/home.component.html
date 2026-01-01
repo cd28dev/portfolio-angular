@@ -1,23 +1,23 @@
 <section class="home">
   <div class="container">
-    <h1 class="name">Carlos David Adrianzén Adanaqué</h1>
-    <p class="subtitle">Desarrollador Backend Junior · Java / Spring Boot</p>
 
-    <p class="profile">
-      Apasionado por el desarrollo backend, especializado en microservicios, Docker y bases de datos relacionales. 
-      Busco construir soluciones escalables y limpias.
-    </p>
+    <h1 class="name"><span class="terminal-prompt">&gt;</span> {{ profile.name }}</h1>
+
+    <p class="subtitle">{{ profile.role }}</p>
+
+    <p class="profile" [innerHTML]="profile.description"></p>
 
     <div class="skills">
-      <span class="skill">Java</span>
-      <span class="skill">Spring Boot</span>
-      <span class="skill">PostgreSQL</span>
-      <span class="skill">Docker</span>
+      <span *ngFor="let skill of skills" class="skill">
+        {{ skill }}
+      </span>
+
+      <span class="skill highlight-skill">Fullstack Capable</span>
     </div>
 
     <div class="cta">
-      <a class="btn" routerLink="/projects">Ver Proyectos</a>
-      <a class="muted" routerLink="/contact">Contacto</a>
+      <a class="btn primary" routerLink="/projects">Ver Proyectos</a>
+      <a class="btn secondary" routerLink="/contact">Contacto</a>
     </div>
   </div>
 </section>
