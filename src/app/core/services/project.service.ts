@@ -13,7 +13,7 @@ export class DataService {
       context:'Proyecto final para Escuela Java - NTT Data',
       techStack: ['Java 17', 'Spring Boot 3', 'Kafka', 'PostgreSQL', 'Docker', 'JWT', 'Spring Cloud'],
       role: 'Parte de equipo de desarrolladores (3)',
-      video: 'video',
+      video: '',
       url: 'https://github.com/joalf1994/ecommerce',
       inProgress: false
     },
@@ -23,6 +23,7 @@ export class DataService {
       context: 'Proyecto Personal (En Desarrollo)', // <--- Etiqueta clave
       techStack: ['Java 17', 'Spring Boot 3', 'Spring Security', 'JWT', 'MySQL'],
       role: 'Backend Developer',
+      video: '',
       url: 'https://github.com/carlosadrianzen/tu-repo-nuevo',
       inProgress: true
     },
@@ -33,7 +34,8 @@ export class DataService {
       techStack: ['Laravel', 'Vue.js', 'MySQL', 'PHP', 'Tailwind CSS'],
       role: 'Fullstack Developer',
       // Si el cliente no te deja poner el código, pon el link a la web desplegada
-      // O déjalo vacío si es confidencial.
+      // O déjalo vacío si es confidencial.}
+      video: '',
       url: '#',
       inProgress: true
     }
