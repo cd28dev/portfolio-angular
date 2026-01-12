@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 export class ContactComponent {
   contactInfo = {
     email: 'carlos.adrianzen27972@gmail.com',
-    linkedin: 'https://linkedin.com/in/tu-usuario',
-    github: 'https://github.com/carlosadrianzen'
+    linkedin: 'https://www.linkedin.com/in/cdaa28/',
+    github: 'https://github.com/cd28dev',
   };
 }
