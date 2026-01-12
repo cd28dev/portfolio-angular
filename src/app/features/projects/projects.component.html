@@ -31,9 +31,17 @@
             <span class="icon">▶</span> Video
           </a>
 
-          <a *ngIf="project.url" [href]="project.url" target="_blank" rel="noopener" class="btn-link">
+          <a *ngIf="project.url && !project.links?.length" [href]="project.url" target="_blank" rel="noopener" class="btn-link">
             <span class="icon">code</span> Código
           </a>
+
+          <ng-container *ngIf="project.links?.length">
+            <a *ngFor="let link of project.links" [href]="link.url" target="_blank" rel="noopener" class="btn-link">
+              <span class="icon" *ngIf="link.type === 'github'">code</span>
+              <span class="icon" *ngIf="link.type === 'demo'">🌐</span>
+              {{ link.label }}
+            </a>
+          </ng-container>
         </div>
 
       </div>

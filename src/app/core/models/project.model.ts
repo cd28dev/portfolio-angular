@@ -1,3 +1,9 @@
+export interface Link {
+  type: 'github' | 'demo' | 'external';
+  label: string;
+  url: string;
+}
+
 export interface Project {
   title: string;
   description: string;
@@ -5,6 +11,7 @@ export interface Project {
   techStack: string[];
   role?: string;
   url?: string;
+  links?: Link[];
   video?: string;
   inProgress?: boolean;
 }

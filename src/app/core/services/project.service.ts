@@ -9,35 +9,51 @@ export class DataService {
   private projects: Project[] = [
     {
       title: 'E-Commerce Microservices System',
-      description: 'Arquitectura basada en microservicios con comunicación síncrona (Feign) y asíncrona (Kafka). Incluye clientes, catálogo, inventario, pedidos, pagos y notificaciones.',
-      context:'Proyecto final para Escuela Java - NTT Data',
-      techStack: ['Java 17', 'Spring Boot 3', 'Kafka', 'PostgreSQL', 'Docker', 'JWT', 'Spring Cloud'],
-      role: 'Parte de equipo de desarrolladores (3)',
+      description: 'Arquitectura distribuida con Spring Boot 3 que implementa patrones como Database per Service, API Gateway y Service Discovery (Eureka). Orquesta flujos asíncronos complejos (pedidos y pagos) mediante eventos con Apache Kafka y comunicación síncrona vía OpenFeign.',
+      context: 'Proyecto para Escuela Java - NTT Data',
+      techStack: [
+        'Java 17',
+        'Spring Boot 3',
+        'Spring Cloud Gateway',
+        'Apache Kafka',
+        'Eureka & OpenFeign',
+        'PostgreSQL',
+        'Docker'
+      ],
+      role: 'Backend Developer (3)',
       video: '',
-      url: 'https://github.com/joalf1994/ecommerce',
+      url: 'https://github.com/cd28dev/ecommerce-v2',
       inProgress: false
     },
     {
-      title: 'Sistema de [Tu Otro Proyecto Java]',
-      description: 'API RESTful avanzada implementando seguridad con OAuth2 y buenas prácticas de Clean Architecture. (Actualmente trabajando en la integración de pasarela de pagos).',
-      context: 'Proyecto Personal (En Desarrollo)', // <--- Etiqueta clave
-      techStack: ['Java 17', 'Spring Boot 3', 'Spring Security', 'JWT', 'MySQL'],
+      title: 'IncidenciasApp',
+      description: 'Arquitectura de Microservicios para el registro y orquestación de incidencias operativas y delictivas. Desarrollado con Java 17 y Spring Boot 3, implementando patrones de Service Discovery (Eureka), API Gateway y comunicación síncrona (Feign). Incluye gestión de identidades segura vía JWT y contenedorización con Docker.',
+      context: 'Proyecto Personal',
+      techStack: ['Java 17', 'Spring Boot 3','Feign','Spring Security', 'JWT', 'PostgreSql','Docker'],
       role: 'Backend Developer',
       video: '',
-      url: 'https://github.com/carlosadrianzen/tu-repo-nuevo',
+      url: 'https://github.com/cd28dev/incidenciasAppSb',
       inProgress: true
     },
     {
-      title: 'Aplicación de Gestión [Nombre App]',
-      description: 'Desarrollo Fullstack de una solución a medida para un cliente real. Gestión de usuarios, reportes y panel administrativo reactivo.',
-      context: 'Experiencia Freelance / Profesional', // <--- Esto vende mucho
-      techStack: ['Laravel', 'Vue.js', 'MySQL', 'PHP', 'Tailwind CSS'],
+      title: 'Sistema de gestión E-commerce',
+      description: 'Plataforma ERP a medida para la gestión operativa de ventas de productos físicos. Orquesta el flujo completo: desde la captación del lead y venta asistida, pasando por el control financiero (pagos parciales/amortizaciones) y logística de envíos, hasta la post-venta con un Tracker público y gestión automatizada de devoluciones.',
+      context: 'Freelance - Terr & Out ',
+      techStack: [
+        'Laravel 12 (API REST)',
+        'Vue 3 (Composition API)',
+        'Pinia',
+        'MySQL',
+        'Bootstrap 5',
+        'Patrón Repositorio'
+      ],
       role: 'Fullstack Developer',
-      // Si el cliente no te deja poner el código, pon el link a la web desplegada
-      // O déjalo vacío si es confidencial.}
       video: '',
-      url: '#',
-      inProgress: true
+      inProgress: true,
+      links: [
+        { type: 'github', label: 'Backend (Laravel)', url: 'https://github.com/cd28dev/back-terry-out/tree/develop' },
+        { type: 'github', label: 'Frontend (Vue)', url: 'https://github.com/cd28dev/front-terry-out/tree/develop' }
+      ]
     }
   ];
 
