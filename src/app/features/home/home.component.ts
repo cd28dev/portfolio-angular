@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Necesario para *ngFor
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { Profile, SkillCategory } from '../../core/models/profile.model';
+import { ProfileService } from '../../core/services/profile.service';
 
 @Component({
   selector: 'app-home',
@@ -9,21 +11,13 @@ import { RouterModule } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent {
-  profile = {
-    name: 'Carlos David Adrianzén',
-    role: 'Desarrollador Backend Junior · Java / Spring Boot',
-    description: `Desarrollador de software enfocado en la arquitectura limpia y microservicios con <strong>Java</strong>.
-    Me caracterizo por mi adaptabilidad: mientras perfecciono mi especialidad en el ecosistema Spring,
-    actualmente entrego soluciones tecnológicas a medida para clientes reales <strong>(Freelance)</strong>.`
-  };
+export class HomeComponent implements OnInit {
+  profile!: Profile;
+  skillCategories: SkillCategory[] = [];
+  constructor(private profileService: ProfileService) {}
 
-  // Array de Skills (Más fácil de mantener)
-  skills: string[] = [
-    'Java 17',
-    'Spring Boot 3',
-    'Docker',
-    'Microservicios',
-    'PostgreSQL'
-  ];
+  ngOnInit(): void {
+    this.profile = this.profileService.getProfile();
+    this.skillCategories = this.profileService.getSkills();
+  }
 }

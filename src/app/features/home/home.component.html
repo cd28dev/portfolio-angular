@@ -2,17 +2,20 @@
   <div class="container">
 
     <h1 class="name"><span class="terminal-prompt">&gt;</span> {{ profile.name }}</h1>
-
     <p class="subtitle">{{ profile.role }}</p>
 
     <p class="profile" [innerHTML]="profile.description"></p>
 
-    <div class="skills">
-      <span *ngFor="let skill of skills" class="skill">
-        {{ skill }}
-      </span>
+    <div class="skills-container">
+      <div *ngFor="let category of skillCategories" class="skill-group">
+        <h3 class="skill-category-title">{{ category.name }}</h3>
 
-      <span class="skill highlight-skill">Fullstack Capable</span>
+        <div class="tags">
+          <span *ngFor="let skill of category.items" class="skill-tag">
+            {{ skill }}
+          </span>
+        </div>
+      </div>
     </div>
 
     <div class="cta">
