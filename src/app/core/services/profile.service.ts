@@ -7,7 +7,7 @@ import { Profile, SkillCategory } from '../models/profile.model';
 export class ProfileService {
 
   private profile: Profile = {
-    name: 'Carlos David Adrianzén - Probando',
+    name: 'Carlos David Adrianzén',
     role: 'Backend Developer · Java | Spring Ecosystem',
     description: `Desarrollador de Software especializado en la construcción de <strong>APIs RESTful</strong> y arquitecturas de <strong>Microservicios</strong> escalables.
     Combino la robustez técnica de <strong>Java</strong> con la agilidad práctica adquirida liderando proyectos <strong>Freelance</strong>, donde transformo requerimientos complejos en soluciones desplegables.`
