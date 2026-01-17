@@ -21,7 +21,7 @@ export class DataService {
         'Docker'
       ],
       role: 'Backend Developer (3)',
-      video: '',
+      video: 'https://www.youtube.com/watch?v=W6ye4pREpNU',
       url: 'https://github.com/cd28dev/ecommerce-v2',
       inProgress: false
     },
