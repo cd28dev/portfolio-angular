@@ -10,9 +10,15 @@
         ¿Tienes un proyecto en mente o quieres charlar sobre tecnología?
       </p>
 
-      <a [href]="'mailto:' + contactInfo.email" class="email-btn">
-        Enviar Correo
-      </a>
+      <div class="actions">
+        <a [href]="'mailto:' + contactInfo.email" class="btn email-btn">
+          Enviar Correo
+        </a>
+
+        <a [href]="contactInfo.whatsapp" target="_blank" rel="noopener" class="btn whatsapp-btn">
+          WhatsApp
+        </a>
+      </div>
 
       <p class="email-text">
         o escríbeme a: <br>
@@ -20,13 +26,9 @@
       </p>
 
       <div class="social-links">
-        <a [href]="contactInfo.linkedin" target="_blank" rel="noopener" class="link">
-          LinkedIn
-        </a>
+        <a [href]="contactInfo.linkedin" target="_blank" rel="noopener" class="link">LinkedIn</a>
         <span class="separator">|</span>
-        <a [href]="contactInfo.github" target="_blank" rel="noopener" class="link">
-          GitHub
-        </a>
+        <a [href]="contactInfo.github" target="_blank" rel="noopener" class="link">GitHub</a>
       </div>
     </div>
 

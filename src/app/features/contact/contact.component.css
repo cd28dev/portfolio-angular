@@ -94,13 +94,56 @@
   opacity: 0.3;
 }
 
-/* Animación */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: var(--font-code);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+
+.email-btn {
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.email-btn:hover {
+  background-color: rgba(137, 180, 250, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(137, 180, 250, 0.2);
+}
+
+.whatsapp-btn {
+  color: #25d366;
+  border: 2px solid #25d366;
+}
+
+.whatsapp-btn:hover {
+  background-color: rgba(37, 211, 102, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.2);
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive */
 @media (max-width: 500px) {
   .contact-card {
     padding: 1.5rem;
@@ -109,4 +152,17 @@
   .contact-card h2 {
     font-size: 1.5rem;
   }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
 }
+
+

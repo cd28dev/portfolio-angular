@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {Contact} from '../../core/models/contact.model';
+import {ContactService} from '../../core/services/contact.service';
 
 @Component({
   selector: 'app-contact',
@@ -8,10 +10,12 @@ import { CommonModule } from '@angular/common';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css',
 })
-export class ContactComponent {
-  contactInfo = {
-    email: 'carlos.adrianzen27972@gmail.com',
-    linkedin: 'https://www.linkedin.com/in/cdaa28/',
-    github: 'https://github.com/cd28dev',
-  };
+export class ContactComponent implements OnInit {
+  contactInfo!: Contact;
+
+  constructor(private contactService: ContactService) {}
+
+  ngOnInit(): void {
+    this.contactInfo = this.contactService.getContactInfo();
+  }
 }
