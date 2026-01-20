@@ -1,4 +1,3 @@
-/* Contenedor principal */
 .contact {
   padding: 4rem 1rem;
   animation: fadeIn 0.6s ease-out;
@@ -10,13 +9,12 @@
   text-align: center;
 }
 
-/* Tarjeta de Contacto */
 .contact-card {
-  background: var(--card); /* Fondo gris oscuro */
+  background: var(--card);
   border: 1px solid var(--border);
   padding: 2.5rem 2rem;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .contact-card h2 {
@@ -38,12 +36,18 @@
   font-weight: 600;
 }
 
-/* Botón principal grande */
-.email-btn {
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+
+.btn {
   display: inline-block;
-  background-color: transparent;
-  color: var(--accent);
-  border: 2px solid var(--accent);
   padding: 0.8rem 2rem;
   font-size: 1.1rem;
   font-weight: 600;
@@ -51,23 +55,43 @@
   text-decoration: none;
   transition: all 0.3s ease;
   font-family: var(--font-code);
-  margin-bottom: 2rem;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+
+.email-btn {
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 .email-btn:hover {
-  background-color: rgba(137, 180, 250, 0.1); /* Fondo sutil al hover */
+  background-color: rgba(137, 180, 250, 0.1);
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(137, 180, 250, 0.2);
 }
 
+
+.whatsapp-btn {
+  color: #25d366;
+  border-color: #25d366;
+}
+
+.whatsapp-btn:hover {
+  background-color: rgba(37, 211, 102, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.2);
+}
+
+
 .email-text {
-  margin-top: -1.5rem;
+  margin-top: 0;
   margin-bottom: 2.5rem;
   color: var(--muted);
   font-size: 0.9rem;
 }
 
-/* Enlaces secundarios */
 .social-links {
   display: flex;
   justify-content: center;
@@ -75,7 +99,6 @@
   gap: 1.5rem;
   color: var(--muted);
   font-size: 0.95rem;
-
 }
 
 .social-links .link {
@@ -94,50 +117,6 @@
   opacity: 0.3;
 }
 
-.actions {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-
-.btn {
-  display: inline-block;
-  padding: 0.8rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-family: var(--font-code);
-  background-color: transparent;
-  cursor: pointer;
-}
-
-
-.email-btn {
-  color: var(--accent);
-  border: 2px solid var(--accent);
-}
-
-.email-btn:hover {
-  background-color: rgba(137, 180, 250, 0.1);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(137, 180, 250, 0.2);
-}
-
-.whatsapp-btn {
-  color: #25d366;
-  border: 2px solid #25d366;
-}
-
-.whatsapp-btn:hover {
-  background-color: rgba(37, 211, 102, 0.1);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.2);
-}
-
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -154,14 +133,13 @@
 
   .actions {
     flex-direction: column;
-    align-items: center;
     gap: 1rem;
+    width: 100%;
   }
 
   .btn {
     width: 100%;
     text-align: center;
+    box-sizing: border-box;
   }
 }
-
-
