@@ -48,11 +48,11 @@ export class DataService {
         'Patrón Repositorio'
       ],
       role: 'Fullstack Developer',
-      video: '',
+      video: 'https://youtu.be/W1Dobz1BMhU',
       inProgress: true,
       links: [
-        { type: 'github', label: 'Backend (Laravel)', url: 'https://github.com/cd28dev/back-terry-out/tree/develop' },
-        { type: 'github', label: 'Frontend (Vue)', url: 'https://github.com/cd28dev/front-terry-out/tree/develop' }
+        //{ type: 'github', label: 'Backend', url: 'https://github.com/cd28dev/back-terry-out/tree/develop' },
+        //{ type: 'github', label: 'Frontend', url: 'https://github.com/cd28dev/front-terry-out/tree/develop' }
       ]
     }
   ];
