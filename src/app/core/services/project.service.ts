@@ -54,7 +54,40 @@ export class DataService {
         //{ type: 'github', label: 'Backend', url: 'https://github.com/cd28dev/back-terry-out/tree/develop' },
         //{ type: 'github', label: 'Frontend', url: 'https://github.com/cd28dev/front-terry-out/tree/develop' }
       ]
-    }
+    },
+    {
+      title: 'Biometric Security & Weather App',
+      description: 'Aplicación nativa Android desarrollada con Kotlin y Jetpack Compose. Implementa Clean Architecture (MVVM). Cuenta con reconocimiento facial mediante ML Kit y consumo de API meteorológica. \n\n⚠️ NOTA: El simulador web (Appetize) tiene acceso limitado a la cámara web. Para probar el reconocimiento facial real, se recomienda descargar el APK.',      context: 'Proyecto académico',
+      techStack: [
+        'Kotlin',
+        'Jetpack Compose',
+        'Clean Architecture',
+        'ML Kit (Face Detection)',
+        'Coroutines & Flow',
+        'Room Database',
+        'Retrofit'
+      ],
+      role: 'Mobile Developer',
+      video: '',
+      links: [
+        {
+          type: 'demo',
+          label: 'Simulador',
+          url: 'https://appetize.io/app/b_6wp7pbjxinlitvlfqaaefggtru'
+        },
+        {
+          type: 'external',
+          label: 'Descargar APK (v1.0)',
+          url: 'https://github.com/cd28dev/kotlin-apps/releases/download/v1.0.0/app-release.apk'
+        },
+        {
+          type: 'github',
+          label: 'Código Fuente',
+          url: 'https://github.com/cd28dev/kotlin-apps'
+        }
+      ],
+      inProgress: false
+    },
   ];
 
   getProjects(): Project[] {
