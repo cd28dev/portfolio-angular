@@ -9,7 +9,7 @@ export class FormacionService {
    private cards: Card[] = [
     {
         title: 'Ingeniería Informática',
-        description: 'UNP | 2021 – Presente',
+        description: 'UNP | 2021 – 2025 [Egresado]',
         link: { label: 'Constancia', url: 'https://drive.google.com/file/d/1TSlaTnxCa0w2aj0fI5sbGqCs2RmxitnS/view?usp=sharing' },
         group: 'Universitaria'
     },
